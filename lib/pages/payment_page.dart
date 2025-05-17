@@ -49,7 +49,7 @@ class _PaymentPageState extends State<PaymentPage> {
                       Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => DeliveryProgressPage(),
+                        builder: (context) => const DeliveryProgressPage(),
                       ),
                     );
                     },
@@ -63,11 +63,11 @@ class _PaymentPageState extends State<PaymentPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         foregroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text("Checkout"),
+        title: const Text("Checkout"),
       ),
       body: Column(
         children: [

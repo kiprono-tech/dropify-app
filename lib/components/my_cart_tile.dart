@@ -48,7 +48,7 @@ class MyCartTile extends StatelessWidget {
 
                       //food price
                       Text(
-                        '\$' + cartItem.food.price.toString(),
+                        '\$${cartItem.food.price}',
                         style: TextStyle(
                             color: Theme.of(context).colorScheme.primary),
                       ),

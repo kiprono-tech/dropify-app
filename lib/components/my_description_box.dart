@@ -32,7 +32,7 @@ class MyDescriptionBox extends StatelessWidget {
         //delivery time
         Column(
           children: [
-            Text("\15-30 min", style: myPrimaryTextStyle,),
+            Text("15-30 min", style: myPrimaryTextStyle,),
             Text("Delivery time", style: mySecondaryTextStyle,),
           ],
         ),

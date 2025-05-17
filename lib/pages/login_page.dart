@@ -22,11 +22,11 @@ class _LoginPageState extends State<LoginPage> {
   //login method
   Future<void> login() async {
     // get instance of auth service
-    final _authService = AuthService();
+    final authService = AuthService();
 
     //try sign in
     try{
-      await _authService.signInWithEmailPassword(
+      await authService.signInWithEmailPassword(
         emailController.text, 
         passwordController.text,
         );
@@ -48,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
     showDialog(
       context: context, 
       builder: (context) => AlertDialog(
-        backgroundColor: Theme.of(context).colorScheme.background,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         title: const Text("User tapped forgot password"),
       )
       );
@@ -57,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

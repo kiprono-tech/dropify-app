@@ -7,14 +7,14 @@ class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
 
   void logout() {
-    final _authService = AuthService();
-    _authService.signOut();
+    final authService = AuthService();
+    authService.signOut();
   }
 
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       child: Column(
         children: [
         //app logo

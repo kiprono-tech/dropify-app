@@ -6,6 +6,7 @@ import 'package:sixth_app/firebase_options.dart';
 import 'package:sixth_app/models/restaurant.dart';
 import 'package:sixth_app/themes/theme_provider.dart';
 
+
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
@@ -15,7 +16,7 @@ void main() async{
       providers: [
         //theme provider
         ChangeNotifierProvider(create: (context) => ThemeProvider()), 
-        //resturaant
+        //restaurant
         ChangeNotifierProvider(create: (context) => Restaurant()),
       ],
       child: const MyApp(),

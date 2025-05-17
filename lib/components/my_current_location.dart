@@ -66,7 +66,7 @@ class MyCurrentLocation extends StatelessWidget {
                   ),
                 ),
                 //drop down menu
-                Icon(Icons.keyboard_arrow_down_rounded),
+                const Icon(Icons.keyboard_arrow_down_rounded),
               ],
             ),
           )

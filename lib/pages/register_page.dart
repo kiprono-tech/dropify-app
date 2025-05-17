@@ -21,13 +21,13 @@ class _RegisterPageState extends State<RegisterPage> {
   // register method
   void register() async {
     //get auth service
-    final _authService = AuthService();
+    final authService = AuthService();
 
     //check if password match -> show error
     if (passwordController.text == confirmPasswordController.text) {
       //try creating user
       try {
-        await _authService.signUpWithEmailPassword(
+        await authService.signUpWithEmailPassword(
           emailController.text,
           passwordController.text,
           );
@@ -58,7 +58,7 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
